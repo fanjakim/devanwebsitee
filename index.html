@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-container"></div>
+  <div class="login-box">
+    <h2>Welcome</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="username" autocomplete="off" required>
+      <input type="password" id="password" placeholder="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var usn = document.getElementById('username').value;
+      var pw = document.getElementById('password').value;
+      if (usn === 'Devan' && pw === '123') {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Username atau password salah!");
+      }
+    });
+  </script>
+</body>
+</html>
